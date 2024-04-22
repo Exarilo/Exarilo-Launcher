@@ -3,25 +3,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:av="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="av" x:Class="Exarilo_Launcher.MainWindow"
     Title="MainWindow" Height="530" Width="1045" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="CanResizeWithGrip" >
-    <Grid x:Name="LayoutRoot"
-        Background="White" Margin="4">
+    <Grid x:Name="LayoutRoot" Margin="4">
         <Grid.Effect>
             <DropShadowEffect BlurRadius="15" Direction="-90" RenderingBias="Quality" ShadowDepth="2"/>
         </Grid.Effect>
 
         <Grid>
-            <Rectangle x:Name="ResizeN" Fill="White" VerticalAlignment="Top"
-                       Height="4" Margin="9,-2,9,0" MouseEnter="DisplayResizeCursor"
-                       MouseLeave="ResetCursor" PreviewMouseLeftButtonDown="Resize" />
-            <Rectangle x:Name="ResizeE" Fill="White" HorizontalAlignment="Right"
-                       Width="4" Margin="0,9,-2,9" MouseEnter="DisplayResizeCursor"
-                       MouseLeave="ResetCursor" PreviewMouseLeftButtonDown="Resize" />
-            <Rectangle x:Name="ResizeS" Fill="White" VerticalAlignment="Bottom"
-                       Height="4" Margin="9,0,9,-2" MouseEnter="DisplayResizeCursor"
-                       MouseLeave="ResetCursor" PreviewMouseLeftButtonDown="Resize" />
-            <Rectangle x:Name="ResizeW" Fill="White" HorizontalAlignment="Left"
-                       Width="4" Margin="-2,9,0,9" MouseEnter="DisplayResizeCursor"
-                       MouseLeave="ResetCursor" PreviewMouseLeftButtonDown="Resize" />
+            <Rectangle x:Name="ResizeN" Fill="White" VerticalAlignment="Top" Height="4" Margin="9,-2,9,0" MouseEnter="DisplayResizeCursor" MouseLeave="ResetCursor" PreviewMouseLeftButtonDown="Resize" />
+            <Rectangle x:Name="ResizeE" Fill="White" HorizontalAlignment="Right" Width="4" Margin="0,9,-2,9" MouseEnter="DisplayResizeCursor" MouseLeave="ResetCursor" PreviewMouseLeftButtonDown="Resize" />
+            <Rectangle x:Name="ResizeS" Fill="White" VerticalAlignment="Bottom" Height="4" Margin="9,0,9,-2" MouseEnter="DisplayResizeCursor" MouseLeave="ResetCursor" PreviewMouseLeftButtonDown="Resize" />
+            <Rectangle x:Name="ResizeW" Fill="White" HorizontalAlignment="Left" Width="4" Margin="-2,9,0,9" MouseEnter="DisplayResizeCursor" MouseLeave="ResetCursor" PreviewMouseLeftButtonDown="Resize" />
         </Grid>
 
         <Path x:Name="ResizeNW" VerticalAlignment="Top" HorizontalAlignment="Left"
