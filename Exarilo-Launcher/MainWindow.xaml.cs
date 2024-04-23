@@ -43,13 +43,13 @@ namespace Exarilo_Launcher
         {
             SourceInitialized += Window1_SourceInitialized;
             InitializeComponent();
-            ButtonsFrame.Content = new ButtonsPage();
+            menuBar.MenuItemClicked += MenuBar_MenuItemClicked;
+        }
+        private void MenuBar_MenuItemClicked(object sender, RoutedEventArgs e)
+        {
+           
         }
         private void Window_OnMouseDown(object sender, MouseButtonEventArgs e) { if (e.LeftButton == MouseButtonState.Pressed) Application.Current.MainWindow.DragMove(); }
-        private void CloseButton_Click(object sender, RoutedEventArgs e) { Application.Current.Shutdown(); }
-        private void MaximizeButton_Click(object sender, RoutedEventArgs e) { AdjustWindowSize(); }
-        private void MinimizeButton_Click(object sender, RoutedEventArgs e) { Application.Current.MainWindow.WindowState = WindowState.Minimized; }
-        private static void AdjustWindowSize() { Application.Current.MainWindow.WindowState = Application.Current.MainWindow.WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized; }
         private void Window1_SourceInitialized(object sender, EventArgs e) { _hwndSource = PresentationSource.FromVisual((Visual)sender) as HwndSource; }
         private void ResizeWindow(ResizeDirection direction) { SendMessage(_hwndSource.Handle, WmSyscommand, (IntPtr)direction, IntPtr.Zero); }
 
